@@ -3,7 +3,7 @@ class Solution {
         return(Binary(arr));
     }
       public static int Binary(int[] arr) {
-         int left = 0;
+        int left = 0;
         int right = arr.length - 1;
 
         while (left < right) {
