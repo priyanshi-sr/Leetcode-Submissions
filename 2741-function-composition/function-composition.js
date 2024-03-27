@@ -3,8 +3,20 @@
  * @return {Function}
  */
 var compose = function(functions) {
-    
-    return x=>functions.reduceRight((acc,f)=>f(acc),x) 
+    if(functions.length===0){
+        return function(x){
+            return x;
+        }
+    }
+    return function(x) {
+        // let result=functions[functions.length-1](x)
+
+        for(let i=functions.length-1;i>=0;i--){
+            x=functions[i](x)
+        }
+        return x
+        
+    }
         
     
 };
