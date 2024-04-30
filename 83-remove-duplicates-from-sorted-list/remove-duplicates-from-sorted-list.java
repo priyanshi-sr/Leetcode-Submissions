@@ -13,9 +13,9 @@ class Solution {
        ListNode current = head;
         while (current != null && current.next != null) {
             if (current.val == current.next.val) {
-                current.next = current.next.next;
+                current.next = current.next.next; // we are skiping if we found the duplicate
             } else {
-                current = current.next;
+                current = current.next;// if not found we are simply updatig the current pointer to next
             }
         }
         return head;
