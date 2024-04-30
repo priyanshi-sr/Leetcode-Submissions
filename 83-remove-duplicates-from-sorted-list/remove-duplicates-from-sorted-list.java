@@ -15,7 +15,7 @@ class Solution {
             if (current.val == current.next.val) {
                 current.next = current.next.next; // we are skiping if we found the duplicate
             } else {
-                current = current.next;// if not found we are simply updatig the current pointer to next
+                current = current.next;// if not found we are simply updating the current pointer to next
             }
         }
         return head;
